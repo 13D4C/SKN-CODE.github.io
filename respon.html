@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKN-COM</title>
+    <link rel="stylesheet" href="code2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="SKN">SKN-COM</a>
+      <div class="menu">
+        <div class="btn">
+          <i class="fas fa-times close-btn"></i>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="code.html">Components</a>
+        <a href="respon.html">Responsive Web</a>
+        <a href="video.html">video</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+    </header>
+    <section class="section-main">
+        <h1></h1>
+      </section>
+          <!--image card end-->
+          <!--image card start-->
+          <section class="yoyo">
+            <div class="container">
+          <section class="yoyo">
+            <!--image card layout start-->
+          <div class="container">
+              <!--image row start-->
+              <div class="row">
+                <!--image card start-->
+                <div class="image">
+                  <img src="picture/song.jpg" alt="">
+                  <div class="details">
+                    <h2> <span></span></h2>
+                    <p></p>
+                    <div class="more">
+                      <a href="#" class="read-more">เว็ปเพลง Demo <span></span></a>
+                      <div class="icon-links">
+                        <a href="song.html"><i class="fas fa-eye"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p></p>
+                </div>
+              </section>
+              <section class="yoyo">
+                <!--image card layout start-->
+              <div class="container">
+                  <!--image row start-->
+                  <div class="row">
+                    <!--image card start-->
+                    <div class="image">
+                      <img src="picture/engcom2.jpg" alt="">
+                      <div class="details">
+                        <h2> <span></span></h2>
+                        <p>โชว์เปอร์เซ็น</p>
+                        <div class="more">
+                          <a href="#" class="read-more">เว็ปSKN-ENGCOM <span></span></a>
+                          <div class="icon-links">
+                            <a href="SKN show.html"><i class="fas fa-eye"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p>เทส</p>
+                    </div>
+                  </section>
+                  <section class="yoyo">
+                    <!--image card layout start-->
+                  <div class="container">
+                      <!--image row start-->
+                      <div class="row">
+                        <!--image card start-->
+                        <div class="image">
+                          <img src="picture/project.jpg" alt="">
+                          <div class="details">
+                            <h2> <span></span></h2>
+                            <p></p>
+                            <div class="more">
+                              <a href="" class="read-more">เว็ปแจกโค้ด <span></span></a>
+                              <div class="icon-links">
+                                <a href="project.html"><i class="fas fa-eye"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <p></p>
+                        </div>
+                      </section>
+                      <section class="yoyo">
+                        <!--image card layout start-->
+                      <div class="container">
+                          <!--image row start-->
+                          <div class="row">
+                            <!--image card start-->
+                            <div class="image">
+                              <img src="picture/working.jpg" alt="">
+                              <div class="details">
+                                <h2> <span></span></h2>
+                                <p></p>
+                                <div class="more">
+                                  <a href="" class="read-more">เว็ปโชว์ผลงาน <span></span></a>
+                                  <div class="icon-links">
+                                    <a href="working.html"><i class="fas fa-eye"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div>
+                              <p></p>
+                            </div>
+                     
+          
+    </div>
+    <!--image card layout end-->
+    </section>
+    <script type="text/javascript">
+        //javascript for navigation bar effect on scroll
+        window.addEventListener("scroll", function(){
+          var header = document.querySelector("header");
+          header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    
+        //javascript for responsive navigation sidebar menu
+        var menu = document.querySelector('.menu');
+        var menuBtn = document.querySelector('.menu-btn');
+        var closeBtn = document.querySelector('.close-btn');
+    
+        menuBtn.addEventListener("click", () => {
+          menu.classList.add('active');
+        });
+    
+        closeBtn.addEventListener("click", () => {
+          menu.classList.remove('active');
+        });
+        </script>
+        <script>
+        </script>
+      </body>
+    </html>
+          

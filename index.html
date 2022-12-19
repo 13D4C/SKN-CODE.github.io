@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKN-COM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+        <div class="cursor"></div>
+      <a href="#" class="SKN">SKN-COM</a>
+      <div class="menu">
+        <div class="btn">
+          <i class="fas fa-times close-btn"></i>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="code.html">Components</a>
+        <a href="respon.html">Responsive Web</a>
+        <a href="video.html">video</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+    </header>
+    <section class="section-main">
+      <h1></h1>
+    </section>
+    <section class="section-two">
+      <h2>น้องๆอ่านหน่อยนะ</h2>
+      <p>สวัสดี พี่ชื่อ ดี นะ เป็นนักเรียนสายการเรียนคอมพิวเตอร์ Gen 4นะ </p>
+      <p>อันนี้เป็นเว็ปไซด์แจก Source code ที่พี่ศึกษามาและเคยลองฝึกทำพี่หวังว่าน้องๆที่เข้ามาจะได้นำสิ่งที่พี่ศึกษาหามาไปพัฒนาตนเองนะและน้องๆที่ยังแข่งขันศิลปหัตกรรม พี่ขอโทษนะที่ไม่มีเวลาว่างไปช่วยสอนหริอให้คำแนะนำนะพี่หวังว่าสิ่งนี้จะเป็นประโยชน์นะ</p>
+      <h2>ขอกำลังใจให้พี่หน่อย</h2>
+      <p>พี่จะยื่น Portfolio สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกะบัง ที่นี่เป็นมหาลัยอันดับ 1 ในใจพี่และพี่หวังว่าพี่จะติดที่แห่งนี้แต่ถ้าไม่ติดปีหน้าพี่ก็จะมาอีกไม่แน่เราอาจได้เป็นคู่แข่งกัน</p>
+      <p>ถ้าใครยังคิดไม่ออกจะเรียนมหาลัยไรดี พี่ก็อยากจะแนะนำ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกะบัง เอาไว้นะดีทุกคณะลองมาดูกันได้แถมสังคมและบรรยากาศยังดีด้วย</p>
+    </section>
+    
+    <script type="text/javascript">
+    //javascript for navigation bar effect on scroll
+    window.addEventListener("scroll", function(){
+      var header = document.querySelector("header");
+      header.classList.toggle('sticky', window.scrollY > 0);
+    });
+
+    //javascript for responsive navigation sidebar menu
+    var menu = document.querySelector('.menu');
+    var menuBtn = document.querySelector('.menu-btn');
+    var closeBtn = document.querySelector('.close-btn');
+
+    menuBtn.addEventListener("click", () => {
+      menu.classList.add('active');
+    });
+
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove('active');
+    });
+    </script>
+
+       
+     <script type="text/javascript">
+     const cursor = document.querySelector(".cursor");
+     var timeout;
+ 
+     //follow cursor on mousemove
+     document.addEventListener("mousemove", (e) => {
+       let x = e.pageX;
+       let y = e.pageY;
+ 
+       cursor.style.top = y + "px";
+       cursor.style.left = x + "px";
+       cursor.style.display = "block";
+ 
+       //cursor effects when mouse stopped
+       function mouseStopped(){
+         cursor.style.display = "none";
+       }
+       clearTimeout(timeout);
+       timeout = setTimeout(mouseStopped, 1000);
+     });
+ 
+     //cursor effects when mouseout
+     document.addEventListener("mouseout", () => {
+       cursor.style.display = "none";
+     });
+     </script>
+      <div class="cursor"></div>
+      <script type="text/javascript">
+        const container = document.querySelector(".container");
+        const card = document.querySelector(".card");
+        const title = document.querySelector(".title");
+        const santa = document.querySelector(".santa");
+        const tree = document.querySelector(".tree");
+    
+        //card rotate on mouse move
+        container.addEventListener("mousemove", (rotate) => {
+          let x = (innerWidth / 2 - rotate.pageX) / 15;
+          let y = (innerHeight / 2 - rotate.pageY) / 15;
+    
+          card.style.transform = "rotateY(" + x + "deg) rotateX(" + y + "deg)";
+        });
+    
+        //card effects on mouse over the card
+        container.addEventListener("mouseover", () => {
+          title.style.transform = "translate3d(0, 0, 160px)";
+          santa.style.transform = "translate3d(0, 0, 220px)";
+          tree.style.transform = "translate3d(0, 0, 120px)";
+          card.style.transition = "all 0.1s ease";
+        });
+    
+        //card back to normal when mouse out
+        container.addEventListener("mouseout", () => {
+          card.style.transform = "rotateY(0deg) rotateX(0deg)";
+          card.style.transition = "all 0.5s ease";
+          title.style.transform = "translate3d(0, 0, 0)";
+          santa.style.transform = "translate3d(0, 0, 0)";
+          tree.style.transform = "translate3d(0, 0, 0)";
+        });
+        </script>
+    
+</body>
+</html>
+      

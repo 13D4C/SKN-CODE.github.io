@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKN-COM</title>
+    <link rel="stylesheet" href="orbject.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+        <div class="cursor"></div>
+      <a href="#" class="SKN"></a>
+      <div class="menu">
+        <div class="btn">
+          <i class="fas fa-times close-btn"></i>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="code.html">Components</a>
+        <a href="respon.html">Responsive Web</a>
+        <a href="video.html">video</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+    </header>
+    <section class="section-main">
+    </section>
+    <section class="section-two">
+        <div class="image">
+            <img src="picture/call.jpg" alt="">
+            <div class="details">
+                <h2><span></span></h2>
+                <p></p>
+            </div>
+        </div>
+        <div class="text-box">
+            <div class="top-area">
+              <h2>Code</h2>
+            </div>
+            <textarea readonly spellcheck="false">
+                HTML
+                ---------------------------------------------------------
+                <div class="gridlist">
+                    <!-- อยากได้หลายอันเรียงก็ทำซ้ำ -->
+                    <div class="card">
+                        <div class="name">
+                            <div>
+                               <strong>Atibodee</strong>
+                               <span>Admin</span>
+                            </div>
+                            <span>โทรมาๆๆ</span>
+                        </div>
+                        <div class="call-to-action">
+                            <div>
+                                <i class='bx bxs-envelope'></i>
+                                <span>Email</span>
+                            </div>
+                            <div>
+                                <i class='bx bxs-phone'></i>
+                                <span>Call</span>
+                            </div>
+                        </div>
+                    </div>
+                ---------------------------------------------------------
+                css
+                ---------------------------------------------------------
+                /* ===== Boxicons CSS ===== */
+                @import url("https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css");
+                
+                .gridlist {
+                    display: grid;
+                    grid-template-columns: repeat(3, 300px);
+                    gap: 40px;
+                    margin: 0 auto;
+                }
+                
+                .gridlist .card {
+                    background-color: rgb(255, 255, 255);
+                    color: #000;
+                    border-radius: 8px;
+                    border: 1px solid rgb(0, 0, 0, .1);
+                }
+                
+                .gridlist .card {
+                    background-color: rgb(255, 255, 255);
+                    border-radius: 10px;
+                    font-size: .9em;
+                }
+                .gridlist .card .name {
+                    padding: 22px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 7px;
+                    border-bottom: 1px solid rgb(0, 0, 0, .1);
+                }
+                .gridlist .card .name strong {
+                    font-weight: 600;
+                }
+                .gridlist .card .name > div span {
+                    font-size: .8em;
+                    padding: 4px 7px;
+                    background-color: rgb(85, 73, 241, .2);
+                    color: rgb(85, 73, 241);
+                    border-radius: 50em;
+                }
+                .gridlist .card .name span {
+                    opacity: .8;
+                }
+                
+                .gridlist .card .call-to-action {
+                    display: flex;
+                }
+                
+                .gridlist .card .call-to-action > div {
+                    flex-grow: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 55px;
+                    gap: 8px;
+                    cursor: pointer;
+                    transition: .3s;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+                .gridlist .card .call-to-action > div:hover {
+                    background-color: rgb(0, 0, 0, .1);
+                }
+                
+                .gridlist .card .call-to-action > div i {
+                    font-size: 1.3em;
+                    opacity: .6;
+                }
+                
+                @media only screen and (max-width: 830px) {
+                
+                    .gridlist {
+                        grid-template-columns: repeat(1, 300px);
+                    }
+                
+                }
+                ---------------------------------------------------------
+            </textarea>
+        </div>
+        }
+        </script>
+
+    </section>

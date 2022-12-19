@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKN-COM</title>
+    <link rel="stylesheet" href="orbject.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+        <div class="cursor"></div>
+      <a href="#" class="SKN"></a>
+      <div class="menu">
+        <div class="btn">
+          <i class="fas fa-times close-btn"></i>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="code.html">Components</a>
+        <a href="respon.html">Responsive Web</a>
+        <a href="video.html">video</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+    </header>
+    <section class="section-main">
+    </section>
+    <section class="section-two">
+        <div class="image">
+            <img src="picture/13.jpg" alt="">
+            <div class="details">
+                <h2><span></span></h2>
+                <p></p>
+            </div>
+        </div>
+        <div class="text-box">
+            <div class="top-area">
+              <h2>Code</h2>
+            </div>
+            <textarea readonly spellcheck="false">
+                HTML
+                ---------------------------------------------------------
+                <div class="otp-field">
+                  <input type="text" maxlength="1" />
+                  <input type="text" maxlength="1" />
+                  <input class="space" type="text" maxlength="1" />
+                  <input type="text" maxlength="1" />
+                  <input type="text" maxlength="1" />
+                  <input type="text" maxlength="1" />
+              </div>
+                ---------------------------------------------------------
+                css
+                ---------------------------------------------------------
+                .otp-field {
+                  display: flex;
+              }
+              .otp-field input {
+                  width: 37px;
+                  font-size: 1.1em;
+                  font-weight: 500;
+                  padding: 10px;
+                  text-align: center;
+                  border-radius: 5px;
+                  margin: 4px;
+                  border: 2px solid rgb(0, 0, 0, .2);
+                  background: rgb(0, 0, 0, .1);
+                  color: rgb(0, 0, 0, .8);
+                  outline: none;
+                  transition: all 0.1s;
+              }
+              
+              .otp-field input:focus {
+                  border: 2px solid rgb(85, 73, 241);
+                  box-shadow: 0 0 2px 2px rgb(85, 73, 241, .3);
+              }
+              .disabled {
+                  opacity: 0.5;
+              }
+              .space {
+                  margin-right: 1rem !important;
+              }
+                ---------------------------------------------------------
+                JavaScript
+                ---------------------------------------------------------
+                const inputs = document.querySelectorAll(".otp-field input");
+                  inputs.forEach((input, index) => {
+                      input.dataset.index = index;
+                      input.addEventListener("paste", handleOnPasteOtp);
+                      input.addEventListener("keyup", handleOtp);
+                  });
+
+                  function handleOnPasteOtp(e) {
+                      const data = e.clipboardData.getData("text");
+                      const value = data.split("");
+                      if (value.length == inputs.length) {
+                          inputs.forEach((input, index) => (input.value = value[index]));
+                          submit();
+                      }
+                  }
+---------------------------------------------------------
+            </textarea>
+        </div>
+        }
+        </script>
+
+    </section>

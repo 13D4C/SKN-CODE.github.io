@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKN-COM</title>
+    <link rel="stylesheet" href="orbject.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+        <div class="cursor"></div>
+      <a href="#" class="SKN"></a>
+      <div class="menu">
+        <div class="btn">
+          <i class="fas fa-times close-btn"></i>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="code.html">Components</a>
+        <a href="respon.html">Responsive Web</a>
+        <a href="video.html">video</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+    </header>
+    <section class="section-main">
+    </section>
+    <section class="section-two">
+        <div class="image">
+            <img src="picture/รูป.png" alt="">
+            <div class="details">
+                <h2><span></span></h2>
+                <p></p>
+            </div>
+        </div>
+        <div class="text-box">
+            <div class="top-area">
+              <h2>Code</h2>
+            </div>
+            <textarea readonly spellcheck="false">
+                HTML
+                ---------------------------------------------------------
+                <div class="card-animation-cont">
+                    <!-- อยากได้เยอะก็แค่ก็อปวางซ้ำ -->
+                    <div class="card">
+                        <img src="https://picsum.photos/id/556/1080/1200" alt="">
+                        <div class="info">
+                            <strong>รูปสวยๆ</strong>
+                            <span class="sub-title">ภาพจ้า</span>
+                            <hr>
+                            <div class="hide-info">
+                                <span class="text">ใส่ข้อความได้นะ
+                                    <a href="#">Learn More</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="card">
+                        <img src="https://picsum.photos/id/556/1080/1200" alt="">
+                        <div class="info">
+                            <strong>รูปสวยๆ</strong>
+                            <span class="sub-title">ภาพจ้า</span>
+                            <hr>
+                            <div class="hide-info">
+                                <span class="text">ใส่ข้อความได้นะ
+                                    <a href="#">Learn More</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                ---------------------------------------------------------
+                css
+                ---------------------------------------------------------
+                .card-animation-cont {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 40px;
+                }
+                
+                .card-animation-cont .card {
+                    position: relative;
+                    height: 300px;
+                    width: 270px;
+                    overflow: hidden;
+                    border-radius: 10px;
+                }
+                /* Shadow over images */
+                .card-animation-cont .card::after {
+                    content: '';
+                    position: absolute;
+                    height: 90%;
+                    inset: 0;
+                    z-index: 10;
+                    background-color: rgb(0, 0, 0, .1);
+                    z-index: 1;
+                    transition: .3s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+                }
+                
+                .card-animation-cont .card img {
+                    width: 100%;
+                    height: 90%;
+                    object-fit: cover;
+                    transform-origin: bottom;
+                    transition: .3s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+                }
+                
+                .card-animation-cont .card .info {
+                    position: absolute;
+                    box-sizing: border-box;
+                    bottom: 0;
+                    background-color: rgb(225, 225, 225);
+                    z-index: 2;
+                    width: 100%;
+                    height: 75%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 18px;
+                    text-decoration: none;
+                    color: rgb(20, 20, 20);
+                    border-radius: 10px;
+                    transform: translateY(68%); /* Change this property */
+                    transition: .3s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+                }
+                .card-animation-cont .card .info strong {
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                }
+                .card-animation-cont .card .info .sub-title {
+                    font-size: .8rem;
+                    opacity: .7;
+                    margin-top: 5px;
+                    font-weight: 500;
+                }
+                
+                .card-animation-cont .card .info hr {
+                    margin: 15px;
+                    border: none;
+                    border-bottom: 1px solid rgb(0, 0, 0, .2);
+                }
+                
+                .card-animation-cont .card .hide-info {
+                    transform: translateY(25px);
+                    opacity: 0;
+                    transition: .4s;
+                    transition-delay: .3s;
+                    font-size: .9rem;
+                    line-height: 1.4rem;
+                }
+                .card-animation-cont .card .hide-info a {
+                    position: relative;
+                    top: 3px;
+                    color: #766DF4;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: .3s;
+                }
+                .card-animation-cont .card .hide-info a:hover {
+                    color: #5549F1;
+                }
+                
+                .card-animation-cont .card:hover > .info {
+                    transform: translateY(0);
+                }
+                .card-animation-cont .card:hover > img {
+                    transform: scale(1.2);
+                }
+                .card-animation-cont .card:hover::after {
+                    background-color: rgb(0, 0, 0, .5);
+                }
+                .card-animation-cont .card:hover .hide-info {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                
+                @media only screen and (max-width: 830px) {
+                
+                    .card-animation-cont {
+                        flex-direction: column;
+                    }
+                
+                }
+                ---------------------------------------------------------
+            </textarea>
+        </div>
+        }
+        </script>
+
+    </section>
